@@ -1,0 +1,27 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .example-card {
+    max-width: 600em;
+  }
+  
+  .example-header-image {
+    background-image: url(../../assets/compras.jpg);
+    background-size: cover;
+  }
+
+  .texto-center{
+    text-align: left;
+  }
+
+  .texto-direita{
+    text-align: right;
+  }
+  
+  .icones{
+    padding: 0px;
+    margin: 0px;
+
+  }
+

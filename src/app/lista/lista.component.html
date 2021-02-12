@@ -1,0 +1,54 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{titulo}}</mat-card-title>
+      <mat-card-subtitle>{{subTitulo}}</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    <mat-card-content>
+      <table class="table table-striped">
+        <tbody>
+          <tr *ngFor="let lista of _listas">
+            <td class="texto-center">
+              {{lista.nome}}
+            </td>
+            <td class="texto-direita icones">
+              <button mat-icon-button (click)="openLista(lista.id)" class="bt_estilo">
+                <mat-icon class="bt_estilo">list</mat-icon>
+            </button>
+              <button mat-icon-button (click)="editByIdLista(lista.id, lista.nome)">
+                <mat-icon>edit</mat-icon>
+            </button>
+              <button mat-icon-button (click)="deleteByIdLista(lista.id)">
+                <mat-icon >delete_outline</mat-icon>
+            </button>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+    </mat-card-content>
+    <mat-card-actions>
+      <div *ngIf="formAdiciona">
+        <form [formGroup]="listaForm" (ngSubmit)="submit()">
+          <h4>Nova Lista</h4>
+          <div class="form-group">
+            <label for="adiciona">Nome: </label>
+            <input type="text" name="nome" id="nome" formControlName="nome" class="form-control">
+          </div>
+          <br>
+          <button mat-button type="submit">Salvar Lista</button>
+          <button mat-button (click)="viewForm(false)">Cancelar</button>
+  
+        </form>
+      </div>
+      <div *ngIf="formAdiciona == false">
+        <button mat-button (click)="viewForm(true)">Adicionar Lista</button>
+      </div>
+
+
+
+
+    </mat-card-actions>
+  </mat-card>
+  
+  

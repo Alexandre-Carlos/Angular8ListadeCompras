@@ -1,0 +1,78 @@
+{
+  "lista": [
+    {
+      "id": 1,
+      "nome": "Supermercado"
+    },
+    {
+      "id": 3,
+      "nome": "Açougue"
+    },
+    {
+      "id": 4,
+      "nome": "Papelaria"
+    }
+  ],
+  "listaDetalhada": [
+    {
+      "id": "2",
+      "item": "arroz",
+      "id_lista": "1",
+      "ativo": true
+    },
+    {
+      "id": "3",
+      "item": "café",
+      "id_lista": "1",
+      "ativo": true
+    },
+    {
+      "id_lista": 2,
+      "id": "2",
+      "item": "borracha",
+      "ativo": true
+    },
+    {
+      "id_lista": 3,
+      "id": "1",
+      "item": "carne moida",
+      "ativo": true
+    },
+    {
+      "id": "4",
+      "item": "macarrão",
+      "ativo": false,
+      "id_lista": "1"
+    },
+    {
+      "id": "WTmFCII",
+      "item": "teste",
+      "ativo": true,
+      "id_lista": "1"
+    },
+    {
+      "id": "93yulf4",
+      "item": "margarina",
+      "ativo": false,
+      "id_lista": "1"
+    },
+    {
+      "id": "V4jTfjd",
+      "item": "panceta",
+      "ativo": true,
+      "id_lista": "3"
+    },
+    {
+      "id": "xoY93SA",
+      "item": "lapis",
+      "ativo": true,
+      "id_lista": "4"
+    },
+    {
+      "id": "Kml-ABn",
+      "item": "caneta",
+      "ativo": false,
+      "id_lista": "4"
+    }
+  ]
+}

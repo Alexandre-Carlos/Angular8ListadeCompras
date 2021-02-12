@@ -1,0 +1,62 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{titulo}}</mat-card-title>
+      <mat-card-subtitle>{{subTitulo}}</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    <mat-card-content>
+      <table class="table table-striped">
+        <tbody>
+          <tr *ngFor="let lista of _listas">
+              <td class="check">
+              <button mat-icon-button (click)="checkAtivo(lista)">
+                  <mat-icon *ngIf="lista.ativo == true">check_circle_outline</mat-icon>
+                  <mat-icon *ngIf="lista.ativo == false">check_circle</mat-icon>
+                </button>
+              </td>
+            <td class="texto-esquerda">
+              {{lista.item}}
+            </td>
+            <td class="texto-direita icones">
+                <button mat-icon-button (click)="editByIdItem(lista.id, lista.item, lista.ativo)"> 
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button (click)="deleteByIdItem(lista.id)">
+                    <mat-icon >delete_outline</mat-icon>
+                </button>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+    </mat-card-content>
+    <mat-card-actions>
+      <div *ngIf="formAdiciona" class="form-group">
+        <form [formGroup]="listaItens" (ngSubmit)="submit()">
+          <h4>Nova Lista</h4>
+          <div class="form-group">
+            <label for="item">Nome: </label>
+            <input type="text" name="item" id="item" formControlName="item" class="form-control">
+          </div>
+          <br>
+          <button mat-button type="submit">Salvar Lista</button>
+          <button mat-button (click)="viewForm(false)">Cancelar</button>
+  
+        </form>
+      </div>
+      <div class="">
+        <div *ngIf="formAdiciona == false">
+            <button mat-button (click)="viewForm(true)">Adicionar Item</button>
+        </div>
+        <div>
+            <button mat-button (click)="voltarLista()">Voltar para Listas</button>
+        </div>
+    </div>
+
+
+
+
+    </mat-card-actions>
+  </mat-card>
+  
+  
